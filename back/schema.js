@@ -14,13 +14,13 @@ export const ProductSchema = z.object({
   updatedAt: z.string().optional(),
   title: z.string({ required_error: "Title is required" }),
   category: z.string({ required_error: "Category is required" }),
-  format: z.string(),
+  format: z.string().optional(),
   origin: z.enum(["Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli-Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche", "Molise", "Piemonte", "Puglia", "Sardegna", "Sicilia", "Toscana", "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto"], {
             errorMap: () => ({ message: "Invalid value for 'origin'. Expected one of the allowed values for ItalianRegion." })
           }),
   typology: z.string(),
-  taste: z.string(),
-  alcolContent: z.number(),
+  taste: z.string().optional(),
+  alcolContent: z.number().optional(),
   image: z.string(),
 }).strict(); // Add strict mode to reject extra properties
 

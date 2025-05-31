@@ -28,7 +28,7 @@
     "typology": "London Dry",
     "taste": "Note agrumate di bergamotto e mandarino",
     "alcolContent": 43,
-    "image": "jrose07.jpeg"
+    "image": "jrose07.jpg"
   },
   {
     "title": "J.Rose 05",
@@ -48,7 +48,7 @@
     "typology": "London Dry",
     "taste": "Note agrumate di bergamotto e mandarino",
     "alcolContent": 43,
-    "image": "jrose04.jpeg"
+    "image": "jrose04.png"
   },
   {
     "title": "Volcano Dry Gin",
@@ -58,7 +58,7 @@
     "typology": "Dry Gin",
     "taste": "Aromatico e speziato con botaniche locali",
     "alcolContent": 41,
-    "image": "volcanodry.webp"
+    "image": "volcanodry.png"
   },
   {
     "title": "Volcano Etna Rosè",
@@ -98,7 +98,7 @@
     "typology": "Compound Gin",
     "taste": "Note di cetriolo e menta",
     "alcolContent": 38,
-    "image": "bigginopepino.jpg"
+    "image": "bigginopepino.webp"
   },
   {
     "title": "Big Gino Velvet Rose",
@@ -198,7 +198,7 @@
     "typology": "Dry Gin",
     "taste": "Note di ginepro, lavanda, ibisco e fiori di sambuco",
     "alcolContent": 43.5,
-    "image": ""
+    "image": "ginarte.png"
   },
   {
     "title": "Maite Fiamma",
@@ -248,7 +248,7 @@
     "typology": "Distilled Gin",
     "taste": "Ginepro dell'Etna e alga mauru, profumo della scogliera catanese",
     "alcolContent": 40,
-    "image": ""
+    "image": "mauru.jpg"
   },
   {
     "title": "Gin Taurus",

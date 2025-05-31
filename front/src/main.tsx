@@ -3,7 +3,10 @@ import { createRoot } from "react-dom/client";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import '../src/style/carousel.css'
+import '../src/style/font.css'
 import "./style/root.css";
+import './style/card.css'
 import "./index.css";
 
 import App from "./App.tsx";

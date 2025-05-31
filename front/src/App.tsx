@@ -4,7 +4,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 
 //Pages
-import HomePage from "./pages/HomePage";
+import ProductList from "./pages/ProductList";
+
+
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
-            <Route path="/" Component={HomePage} />
+            <Route path="/" Component={ProductList} />
             {/* <Route path="/:id" Component={} /> */}
           </Route>
         </Routes>

@@ -6,7 +6,7 @@ import logo from "../assets/GintasticDue.png";
 export default function Header() {
   return (
     <>
-      <header>
+      <header className="p-2">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">

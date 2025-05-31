@@ -48,7 +48,7 @@
      HEADER
   =============== */
 
-  --header-bg: var(--brand-dark-brown);       /* Sfondo testata */
+  --header-bg: var(--brand-warm-brown);       /* Sfondo testata */
   --header-text: var(--brand-gold-muted);     /* Colore testo principale */
   --header-hover: var(--brand-copper);        /* Hover su link/menu */
   --header-shadow: var(--shadow-medium);      /* Ombra testata sticky */

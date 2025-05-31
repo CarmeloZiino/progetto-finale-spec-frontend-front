@@ -1,6 +1,7 @@
 /* Font e Typografy */
 * {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lora', serif !important;
+
 }
 
 /* BackGround and ColorText*/
@@ -12,6 +13,7 @@ body {
 /* Header */
 header {
   background-color: var(--header-bg) !important;
+  box-shadow: var(--shadow-strong);
 }
 
 .nav-link {

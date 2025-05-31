@@ -5,7 +5,7 @@ export default function DefaultLayout() {
   return (
     <>
       <Header />
-      <main className="container">
+      <main className="container p-5 d-flex flex-column justify-content-center">
         <Outlet />
       </main>
     </>

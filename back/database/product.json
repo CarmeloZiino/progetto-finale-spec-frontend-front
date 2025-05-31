@@ -1,0 +1,303 @@
+[
+  {
+    "title": "J.Rose 01",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Puglia",
+    "typology": "London Dry",
+    "taste": "Note agrumate di bergamotto e mandarino",
+    "alcolContent": 43,
+    "image": "jrose01.jpeg"
+  },
+
+  {
+    "title": "J.Rose 02",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Puglia",
+    "typology": "London Dry",
+    "taste": "Note agrumate di bergamotto e mandarino",
+    "alcolContent": 43,
+    "image": "jrose02.webp"
+  },
+  {
+    "title": "J.Rose 07",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Puglia",
+    "typology": "London Dry",
+    "taste": "Note agrumate di bergamotto e mandarino",
+    "alcolContent": 43,
+    "image": "jrose07.jpeg"
+  },
+  {
+    "title": "J.Rose 05",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Puglia",
+    "typology": "London Dry",
+    "taste": "Note agrumate di bergamotto e mandarino",
+    "alcolContent": 43,
+    "image": "jrose05.jpeg"
+  },
+  {
+    "title": "J.Rose 04",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Puglia",
+    "typology": "London Dry",
+    "taste": "Note agrumate di bergamotto e mandarino",
+    "alcolContent": 43,
+    "image": "jrose04.jpeg"
+  },
+  {
+    "title": "Volcano Dry Gin",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Sicilia",
+    "typology": "Dry Gin",
+    "taste": "Aromatico e speziato con botaniche locali",
+    "alcolContent": 41,
+    "image": "volcanodry.webp"
+  },
+  {
+    "title": "Volcano Etna Rosè",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Sicilia",
+    "typology": "Distilled Gin",
+    "taste": "Note floreali e fruttate",
+    "alcolContent": 41,
+    "image": "volcanoetna.webp"
+  },
+  {
+    "title": "Volcano Etna Dirty",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Sicilia",
+    "typology": "Distilled Gin",
+    "taste": "Note di olive Nocellara dell'Etna e olio extravergine",
+    "alcolContent": 41,
+    "image": "volcanodirty.jpg"
+  },
+  {
+    "title": "Big Gino",
+    "category": "Gin",
+    "format": "100cl",
+    "origin": "Veneto",
+    "typology": "Italian Dry Gin",
+    "taste": "Note naturali e non filtrate",
+    "alcolContent": 40,
+    "image": "biggino.jpg"
+  },
+  {
+    "title": "Big Gino Pepino Loco",
+    "category": "Gin",
+    "format": "100cl",
+    "origin": "Veneto",
+    "typology": "Compound Gin",
+    "taste": "Note di cetriolo e menta",
+    "alcolContent": 38,
+    "image": "bigginopepino.jpg"
+  },
+  {
+    "title": "Big Gino Velvet Rose",
+    "category": "Gin",
+    "format": "100cl",
+    "origin": "Veneto",
+    "typology": "Compound Gin",
+    "taste": "Note di rosa e frutti rossi",
+    "alcolContent": 38,
+    "image": "bigginovelvet.webp"
+  },
+  {
+    "title": "Big Gino Exotic Dream",
+    "category": "Gin",
+    "format": "100cl",
+    "origin": "Veneto",
+    "typology": "Compound Gin",
+    "taste": "Note esotiche di frutta tropicale",
+    "alcolContent": 38,
+    "image": "bigginoexotic.jpg"
+  },
+  {
+    "title": "Big Gino Red Hot Fruits",
+    "category": "Gin",
+    "format": "100cl",
+    "origin": "Veneto",
+    "typology": "Compound Gin",
+    "taste": "Note di frutti rossi",
+    "alcolContent": 38,
+    "image": "bigginored.jpg"
+  },
+  {
+    "title": "Insulae Gin",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Sicilia",
+    "typology": "Distilled Gin",
+    "taste": "Agrumi siciliani, pistacchio di Bronte, mandorla di Noto",
+    "alcolContent": 42,
+    "image": "insulae.jpg"
+  },
+  {
+    "title": "Roby Marton Gin",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Veneto",
+    "typology": "Italian Dry Gin",
+    "taste": "Note di liquirizia, arancia, zenzero e spezie",
+    "alcolContent": 47,
+    "image": "roby.jpg"
+  },
+  {
+    "title": "Gin Del Professore Crocodile",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Lazio",
+    "typology": "Old Tom Gin",
+    "taste": "Note di ginepro, agrumi, coriandolo, vaniglia e spezie esotiche",
+    "alcolContent": 45,
+    "image": "croc.jpg"
+  },
+  {
+    "title": "Gin Del Professore Monsieur",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Lazio",
+    "typology": "Old Tom Gin",
+    "taste": "Note erbacee e speziate",
+    "alcolContent": 43,
+    "image": "prof.webp"
+  },
+  {
+    "title": "Gin Del Professore À la Madame",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Lazio",
+    "typology": "Old Tom Gin",
+    "taste": "Note floreali e dolci",
+    "alcolContent": 42,
+    "image": "madame.jpg"
+  },
+  {
+    "title": "Gin Del Professore The Fighting Bear",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Lazio",
+    "typology": "Old Tom Gin",
+    "taste": "Note robuste e speziate",
+    "alcolContent": 44,
+    "image": "bear.jpg"
+  },
+  {
+    "title": "Gin Arte",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Toscana",
+    "typology": "Dry Gin",
+    "taste": "Note di ginepro, lavanda, ibisco e fiori di sambuco",
+    "alcolContent": 43.5,
+    "image": ""
+  },
+  {
+    "title": "Maite Fiamma",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Toscana",
+    "typology": "London Dry",
+    "taste": "Note affumicate e speziate",
+    "alcolContent": 43,
+    "image": "fiamma.webp"
+  },
+  {
+    "title": "Maite Furia",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Toscana",
+    "typology": "London Dry",
+    "taste": "Note intense e speziate",
+    "alcolContent": 43,
+    "image": "furia.webp"
+  },
+  {
+    "title": "Maite Spiaggia Lunga",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Toscana",
+    "typology": "London Dry",
+    "taste": "Note fresche e marine, con sentori di erbe aromatiche",
+    "alcolContent": 43,
+    "image": "spiaggialunga.webp"
+  },
+  {
+    "title": "U'mauru Gin - Spaccapietre",
+    "category": "Gin",
+    "format": "50cl",
+    "origin": "Sicilia",
+    "typology": "Cold Distilled",
+    "taste": "Ginepro dell'Etna e felce cedracca, sapore resinoso e alpestre",
+    "alcolContent": 40,
+    "image": "spaccapietre.jpg"
+  },
+  {
+    "title": "U'mauru Gin - 19.9 IN SPIRIT",
+    "category": "Gin",
+    "format": "50cl",
+    "origin": "Sicilia",
+    "typology": "Distilled Gin",
+    "taste": "Ginepro dell'Etna e alga mauru, profumo della scogliera catanese",
+    "alcolContent": 40,
+    "image": ""
+  },
+  {
+    "title": "Gin Taurus",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Piemonte",
+    "typology": "London Dry",
+    "taste": "Note di ginepro, agrumi e spezie piemontesi",
+    "alcolContent": 42,
+    "image": "taurus.png"
+  },
+  {
+    "title": "Gin Piero Dry",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Abruzzo",
+    "typology": "Dry Gin",
+    "taste": "Ginepro, arancia, maggiorana, cardamomo, zenzero e nota floreale segreta",
+    "alcolContent": 43,
+    "image": "piero.webp"
+  },
+  {
+    "title": "Gin Piero L'Italiano",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Abruzzo",
+    "typology": "Dry Gin",
+    "taste": "Ginepro della Majella, rosmarino, arancia, maggiorana, limone, origano",
+    "alcolContent": 43,
+    "image": "italiano.jpg"
+  },
+  {
+    "title": "Gin Piero 58 Navy Strength",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Abruzzo",
+    "typology": "Navy Strength",
+    "taste": "Ginepro, arancia, maggiorana, cardamomo, zenzero e nota floreale segreta",
+    "alcolContent": 58,
+    "image": "pierons.jpg"
+  },
+  {
+    "title": "Roby Marton 55",
+    "category": "Gin",
+    "format": "70cl",
+    "origin": "Veneto",
+    "typology": "Navy Strength",
+    "taste": "Note intense e complesse di erbe, spezie e agrumi, con una forte persistenza",
+    "alcolContent": 55,
+    "image": "roby55.jpg"
+  }
+]

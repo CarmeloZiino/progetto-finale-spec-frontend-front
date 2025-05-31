@@ -1,0 +1,32 @@
+/* Font e Typografy */
+* {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* BackGround and ColorText*/
+
+body {
+  background-color: var(--color-paper);
+}
+
+header {
+  background-color: var(--header-bg) !important;
+}
+
+.nav-link {
+  color: var(--header-text) !important;
+}
+
+.btn {
+  background-color: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text);
+  border: 1px solid var(--btn-outline-border);
+}
+
+.btn:hover {
+  background-color: var(--btn-primary-hover) !important;
+    border: 1px solid var(--btn-outline-hover-bg);
+
+
+}
+

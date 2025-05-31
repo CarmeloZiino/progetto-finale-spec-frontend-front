@@ -9,6 +9,7 @@ body {
   background-color: var(--color-paper);
 }
 
+/* Header */
 header {
   background-color: var(--header-bg) !important;
 }
@@ -17,6 +18,15 @@ header {
   color: var(--header-text) !important;
 }
 
+.navbar-toggler {
+  background-color: var(--btn-primary-bg) !important;
+  color: var(--btn-primary-text);
+}
+.navbar-toggler:hover {
+  background-color: var(--btn-primary-hover) !important;
+}
+
+/* Btn  */
 .btn {
   background-color: var(--btn-primary-bg) !important;
   color: var(--btn-primary-text);
@@ -25,8 +35,5 @@ header {
 
 .btn:hover {
   background-color: var(--btn-primary-hover) !important;
-    border: 1px solid var(--btn-outline-hover-bg);
-
-
+  border: 1px solid var(--btn-outline-hover-bg);
 }
-

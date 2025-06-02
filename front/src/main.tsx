@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Importa il JavaScript di Bootstrap
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
 import '../src/style/carousel.css'
 import '../src/style/font.css'
 import "./style/root.css";

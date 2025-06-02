@@ -3,42 +3,76 @@
 //Logo
 import logo from "../assets/GintasticDue.png";
 
+//Icon
+import { GiHeartBottle } from "react-icons/gi";
+import { MdCompare } from "react-icons/md";
+
 export default function Header() {
   return (
     <>
       <header className="p-2">
-        <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+        {/* VERSIONE DESKTOP - visibile solo su schermi lg e superiori */}
+        <nav className="navbar navbar-expand-lg d-none d-lg-block">
+          <div className="container-fluid d-flex justify-content-start">
+            {/* LOGO */}
+            <a className="navbar-brand " href="#">
               <img src={logo} width={75} className="rounded-3" alt="LOGO" />
             </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav gap-3 me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Comparator
-                  </a>
-                </li>
-              </ul>
+
+            {/* Menu desktop */}
+            <div className="navIcon d-flex gap-4">
+              {/* WISHLIST */}
+              <div>
+                <a
+                  className="navBtnLink d-flex flex-column justify-content-center align-items-center"
+                  href=""
+                >
+                  <GiHeartBottle className="icon" />
+                  <p>Wishlist</p>
+                </a>
+              </div>
+              {/*COMPARE */}
+              <div>
+                <a
+                  className="navBtnLink d-flex flex-column justify-content-center align-items-center"
+                  href=""
+                >
+                  <MdCompare className="icon" />
+                  <p>Compare</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* VERSIONE MOBILE - visibile solo su schermi inferiori a lg */}
+        <nav className="navbar d-block d-lg-none">
+          <div className="container-fluid d-flex flex-column justify-contente-center align-items-end">
+            {/* LOGO più piccolo */}
+            <a className="" href="#">
+              <img src={logo} width={38} className="rounded-3" alt="LOGO" />
+            </a>
+
+            {/* Menu mobile in colonna senza testo */}
+            <div className="d-flex flex-column gap-3 mt-2">
+              {/* WISHLIST - solo icona */}
+              <div>
+                <a
+                  className="navBtnLink d-flex justify-content-center align-items-center"
+                  href=""
+                >
+                  <GiHeartBottle className="icon" />
+                </a>
+              </div>
+              {/*COMPARE - solo icona */}
+              <div>
+                <a
+                  className="navBtnLink d-flex justify-content-center align-items-center"
+                  href=""
+                >
+                  <MdCompare className="icon" />
+                </a>
+              </div>
             </div>
           </div>
         </nav>

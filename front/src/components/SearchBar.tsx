@@ -1,31 +1,39 @@
+import { useState } from "react";
 
 //Hooks
 import useDebounce from "../hooks/useDebounce";
-import useProduct from "../hooks/useProduct";
-import useFilteredProducts from "../hooks/useFilteredProducts";
+
+//Context
+import { useGlobalContext } from "../context/GlobalContext";
 
 export default function SearchBar() {
-  const { products } = useProduct();
+  const [inputValue, setInputValue] = useState("");
 
-  //Input Search
-  const { setSearchQuery } = useFilteredProducts();
+  //Input Variabile di Stato Ricerca
+  const { setSearchQuery } = useGlobalContext();
 
   const handleSearch = useDebounce((value: string) => {
     setSearchQuery(value);
-  }, 300);
+  }, 500);
 
   return (
-    <form id="searchBar" className="d-flex container">
+    <form
+      id="searchBar"
+      className="d-flex container"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <input
         className="form-control me-2"
         type="search"
         placeholder="Roby Marton 55"
         aria-label="Search"
-        onChange={(e) => handleSearch(e.target.value)}
+        value={inputValue}
+        onChange={(e) => {
+          setInputValue(e.target.value);
+          handleSearch(e.target.value);
+        }}
       />
-      <button className="btnSearch" type="submit">
-        Search
-      </button>
+   
     </form>
   );
 }

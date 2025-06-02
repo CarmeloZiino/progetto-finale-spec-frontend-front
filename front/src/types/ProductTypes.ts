@@ -1,4 +1,3 @@
-
 type ItalianRegion =
   | "Abruzzo"
   | "Basilicata"
@@ -22,6 +21,7 @@ type ItalianRegion =
   | "Veneto";
 
 export type Product = {
+  id: number;
   title: string;
   category: string;
   format?: string;

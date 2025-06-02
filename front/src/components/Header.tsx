@@ -27,9 +27,9 @@ export default function Header() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav gap-3 me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a className="nav-link" aria-current="page" href="#">
                     Home
                   </a>
                 </li>
@@ -39,21 +39,21 @@ export default function Header() {
                   </a>
                 </li>
               </ul>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </nav>
       </header>
+      <form id='searchBar' className="d-flex container">
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="Roby Marton 55"
+          aria-label="Search"
+        />
+        <button className="btnSearch" type="submit">
+          Search
+        </button>
+      </form>
     </>
   );
 }

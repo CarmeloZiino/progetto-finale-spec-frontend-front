@@ -1,7 +1,6 @@
 /* Font e Typografy */
 * {
-  font-family: 'Lora', serif !important;
-
+  font-family: "Lora", serif !important;
 }
 
 /* BackGround and ColorText*/
@@ -12,30 +11,68 @@ body {
 
 /* Header */
 header {
-  background-color: var(--header-bg) !important;
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("./assets/headerBG.jpg") !important;
   box-shadow: var(--shadow-strong);
 }
 
 .nav-link {
-  color: var(--header-text) !important;
+  color: var(--brand-warm-brown) !important;
+  background-color: #f6eed7c5;
+  border-radius: 7pt;
+  font-size: 1.15rem;
+}
+
+.nav-link:hover {
+  color: var(--brand-gold-muted) !important;
+  background-color: var(--accent-steel-blue);
+  font-weight: 900;
 }
 
 .navbar-toggler {
-  background-color: var(--btn-primary-bg) !important;
-  color: var(--btn-primary-text);
+  background-color: var(--color-paper);
+  border-radius: 5pt;
+  border: 1px solid var(--color-stone);
+  box-shadow: var(--shadow-medium);
 }
 .navbar-toggler:hover {
-  background-color: var(--btn-primary-hover) !important;
+
+  background-color: var(--brand-gold-muted);
+  color: var(--btn-primary-text);}
+
+
+.navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f8f5ed' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+  
+
+
+/* SearchBar */
+
+#searchBar {
+  width: 70%;
+  max-width: 1000px;
+  position: relative;
+  bottom: 20px;
 }
 
-/* Btn  */
-.btn {
-  background-color: var(--btn-primary-bg) !important;
+#searchBar > input {
+  border-radius: 5pt;
+  border: 1px solid var(--color-stone);
+  box-shadow: var(--shadow-medium);
+}
+
+.btnSearch {
+  background-color: var(--color-paper);
+  border-radius: 5pt;
+  border: 1px solid var(--color-stone);
+  box-shadow: var(--shadow-medium);
+}
+
+.btnSearch:hover {
+  background-color: var(--brand-gold-muted);
   color: var(--btn-primary-text);
-  border: 1px solid var(--btn-outline-border);
-}
-
-.btn:hover {
-  background-color: var(--btn-primary-hover) !important;
-  border: 1px solid var(--btn-outline-hover-bg);
 }

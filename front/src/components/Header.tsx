@@ -43,17 +43,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      <form id='searchBar' className="d-flex container">
-        <input
-          className="form-control me-2"
-          type="search"
-          placeholder="Roby Marton 55"
-          aria-label="Search"
-        />
-        <button className="btnSearch" type="submit">
-          Search
-        </button>
-      </form>
     </>
   );
 }

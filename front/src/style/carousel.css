@@ -5,16 +5,14 @@
   overflow: hidden;
   position: relative;
   border-radius: 20pt;
-box-shadow: var(--shadow-strong);
-z-index: 0;
+  box-shadow: var(--shadow-strong);
+  z-index: 0;
 }
 
 .carousel-inner {
   position: relative;
   width: 100%;
   aspect-ratio: 3/2;
-
-
 }
 
 .carousel-item {
@@ -45,7 +43,60 @@ z-index: 0;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  
+}
+
+/* Primo elemento attivo: zoom */
+.carousel-item:nth-child(1).active img,
+.carousel-item:nth-child(3).active img {
+  animation: zoomIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Secondo elemento attivo: fade */
+.carousel-item:nth-child(2).active img,
+.carousel-item:nth-child(4).active img {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-5deg) scale(0.98);
+    opacity: 0.7;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {

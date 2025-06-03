@@ -5,6 +5,9 @@ import { GiHeartBottle } from "react-icons/gi";
 //HOOK
 import { useWishlist } from "../context/WishlistContext";
 
+//Import React
+import { Link } from "react-router-dom";
+
 export default function ProductRow({
   id,
   title,
@@ -31,26 +34,28 @@ export default function ProductRow({
   };
 
   return (
-    <div className="book d-flex flex-column" key={id}>
-      <span>Provenienza:</span> <p>{origin}</p>
-      <span>Metodo:</span>
-      <p>{typology}</p>
-      <GiHeartBottle
-        id="wishIcon"
-        style={{
-          fontSize: "25px",
-          position: "relative",
-          left: "100px",
-          top: "40px",
-          color: isProductInWishlist ? "red" : "black",
-          transition: "color 0.3s ease",
-        }}
-        onClick={handleAddToWishlist}
-      />
+    <Link to={`/${id}`} className="book " key={id}>
+      <div>
+        <span>Provenienza:</span> <p>{origin}</p>
+        <span>Metodo:</span>
+        <p>{typology}</p>
+        <GiHeartBottle
+          id="wishIcon"
+          style={{
+            fontSize: "25px",
+            position: "relative",
+            left: "125px",
+            top: "40px",
+            color: isProductInWishlist ? "red" : "black",
+            transition: "color 0.3s ease",
+          }}
+          onClick={handleAddToWishlist}
+        />
+      </div>
       <div className="cover d-flex flex-column">
         <img src={`/gin/${image}`} />
         <p className="m-0">{title}</p>
       </div>
-    </div>
+    </Link>
   );
 }

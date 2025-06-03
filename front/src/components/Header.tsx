@@ -1,4 +1,5 @@
 //Import Essenziali
+import { Link } from "react-router-dom";
 
 //Componenete Wishlist
 import Wishlist from "./Wishlist";
@@ -21,14 +22,14 @@ export default function Header() {
       <header className="p-2">
         {/* VERSIONE DESKTOP - visibile solo su schermi lg e superiori */}
         <nav className="navbar navbar-expand-lg d-none d-lg-block">
-          <div className="container-fluid d-flex justify-content-start">
-            {/* LOGO */}
-            <a className="navbar-brand " href="/">
-              <img src={logo} width={75} className="rounded-3" alt="LOGO" />
-            </a>
+          <div className="container d-flex flex-column justify-content-center align-items-center gap-2">
+            {/* LOGO CENTRATO */}
+            <Link className="navbar-brand d-flex justify-content-center align-items-center mb-2" to="/">
+              <img src={logo} width={115} className="rounded-3" alt="LOGO" />
+            </Link>
 
-            {/* Menu desktop */}
-            <div className="navIcon d-flex gap-4">
+            {/* Menu desktop sotto il logo */}
+            <div className="navIcon d-flex gap-4 mt-2 px-3">
               {/* WISHLIST */}
               <div>
                 <a
@@ -49,13 +50,13 @@ export default function Header() {
               </div>
               {/*COMPARE */}
               <div>
-                <a
+                <Link
                   className="navBtnLink d-flex flex-column justify-content-center align-items-center"
-                  href=""
+                  to=""
                 >
                   <MdCompare className="icon" />
                   <p>Compare</p>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -65,12 +66,12 @@ export default function Header() {
         <nav className="navbar d-block d-lg-none">
           <div className="container-fluid d-flex flex-column justify-contente-center align-items-end">
             {/* LOGO più piccolo */}
-            <a className="" href="#">
+            <Link to="/" className="">
               <img src={logo} width={38} className="rounded-3" alt="LOGO" />
-            </a>
+            </Link>
 
             {/* Menu mobile in colonna senza testo */}
-            <div className="d-flex flex-column gap-3 mt-2">
+            <div className="navbar-icon d-flex flex-column gap-3 mt-2">
               {/* WISHLIST - solo icona */}
               <div>
                 <a
@@ -90,12 +91,12 @@ export default function Header() {
               </div>
               {/*COMPARE - solo icona */}
               <div>
-                <a
+                <Link
+                  to=""
                   className="navBtnLink d-flex justify-content-center align-items-center"
-                  href=""
                 >
                   <MdCompare className="icon" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

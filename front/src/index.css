@@ -11,22 +11,36 @@ body {
 
 /* Header */
 header {
-  height: 20vh;
+  height: 25vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.3)
+      rgba(59, 59, 59, 0.4),
+      rgba(59, 59, 59, 0.4)
     ),
     url("./assets/headerBG.jpg") !important;
   box-shadow: var(--shadow-strong);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .navIcon {
   background-color: #f7f5ed;
   border-radius: 7pt;
-  padding: 3px;
+  padding: 4px;
+  margin: 0px !important;
+}
+
+.navbar-brand {
+  margin: 0px !important;
+}
+
+.navbar-brand > img,
+.navIcon {
+  border: 3px solid var(--brand-warm-brown);
+  box-shadow: var(--shadow-strong);
 }
 
 .navBtnLink > p {
@@ -82,8 +96,13 @@ header {
 #searchBar {
   width: 70%;
   max-width: 1000px;
-  position: relative;
-  bottom: 65px;
+  position: fixed;
+  z-index: 2;
+  top: 22vh;
+  left: 50%;
+  transform: translateX(-50%); 
+  padding: 10px; /* Spazio interno */
+  border-radius: 5pt; /* Arrotonda i bordi */
 }
 
 #searchBar > input {
@@ -120,9 +139,8 @@ header {
   background-color: rgba(255, 255, 255, 0.648) !important;
 }
 
-
 /* WISHICON */
 
-#wishIcon:hover{
-color: var(--state-error);
+#wishIcon:hover {
+  color: var(--state-error);
 }

@@ -1,9 +1,13 @@
+//ICON
+import { GiHeartBottle } from "react-icons/gi";
+
 //Import React
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 //Hooks
 import useProduct from "../hooks/useProduct";
+import { useWishlist } from "../context/WishlistContext";
 
 export default function DetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -15,14 +19,47 @@ export default function DetailsPage() {
     }
   }, [id]);
 
+  //Funzioni dalla wishlist
+  const { addToWishlist, isInWishlist } = useWishlist();
+
+  // Verifica se il prodotto è già nella wishlist
+  const isProductInWishlist = isInWishlist(singleProduct?.product.id);
+
+  //Funzione supporto aggiunta wishlist
+  const handleAddToWishlist = () => {
+    if (!singleProduct || !singleProduct.product) {
+      return <div>Caricamento in corso...</div>;
+    }
+
+    const productToAdd = {
+      id: singleProduct.product.id,
+      title: singleProduct.product.title,
+      origin: singleProduct.product.origin,
+      typology: singleProduct?.product.typology,
+      image: singleProduct?.product.image,
+    };
+    addToWishlist(productToAdd);
+  };
+
   if (!singleProduct || !singleProduct.product) {
     return <div>Caricamento in corso...</div>;
   }
+
   return (
     <>
-      <h1 className="titleDetails text-center text-md-start mb-3">
-        {singleProduct.product.title}
-      </h1>
+      <div className="d-flex align-items-center justify-content-between">
+        <h1 className="titleDetails text-center text-md-start mb-3">
+          {singleProduct.product.title}
+        </h1>
+        <GiHeartBottle
+          id="wishIcon"
+          style={{
+            fontSize: "25px",
+            color: isProductInWishlist ? "red" : "blue",
+          }}
+          onClick={handleAddToWishlist}
+        />
+      </div>
       <div
         className="cardDetails d-flex flex-column flex-md-row gap-3 justify-content-center align-items-stretch"
         key={singleProduct.product.id}

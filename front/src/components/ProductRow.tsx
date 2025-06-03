@@ -20,6 +20,7 @@ export default function ProductRow({
 
   // Verifica se il prodotto è già nella wishlist
   const isProductInWishlist = isInWishlist(id);
+  console.log(isInWishlist(id));
 
   const handleAddToWishlist = () => {
     const productToAdd = {
@@ -28,17 +29,18 @@ export default function ProductRow({
       origin,
       typology,
       image,
-      // Aggiungi altri campi necessari
     };
     addToWishlist(productToAdd);
   };
 
   return (
-    <Link to={`/${id}`} className="book " key={id}>
+    <div className="book " key={id}>
       <div>
-        <span>Provenienza:</span> <p>{origin}</p>
-        <span>Metodo:</span>
-        <p>{typology}</p>
+        <Link to={`/${id}`} className="text-decoration-none text-black">
+          <span>Provenienza:</span> <p>{origin}</p>
+          <span>Metodo:</span>
+          <p>{typology}</p>
+        </Link>
         <GiHeartBottle
           id="wishIcon"
           style={{
@@ -56,6 +58,6 @@ export default function ProductRow({
         <img src={`/gin/${image}`} />
         <p className="m-0">{title}</p>
       </div>
-    </Link>
+    </div>
   );
 }

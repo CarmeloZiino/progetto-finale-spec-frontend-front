@@ -5,7 +5,7 @@
 
   --color-paper: #f8f5ed;         /* Sfondo principale tipo carta antica */
   --color-ink: #1a1a1a;           /* Inchiostro scuro per testi principali */
-  --color-charcoal: #3b3b3b;      /* Testi secondari, titoli meno evidenti */
+  --color-charcoal: rgb(59, 59, 59);      /* Testi secondari, titoli meno evidenti */
   --color-stone: #b4b4b4;         /* Grigio pietra – bordi, linee, separatori */
   --color-cloud: #e6e1d9;         /* Sfondo neutro chiaro per sezioni soft */
 

@@ -6,6 +6,7 @@
   position: relative;
   border-radius: 20pt;
 box-shadow: var(--shadow-strong);
+z-index: 0;
 }
 
 .carousel-inner {

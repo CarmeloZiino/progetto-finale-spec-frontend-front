@@ -12,7 +12,7 @@ import { FaTrash } from "react-icons/fa";
 import "../style/wishlist.css";
 
 export default function Wishlist() {
-//Importo le funzioni dal contesto
+  //Importo le funzioni dal contesto
   const { wishlist, removeFromWishlist, showWishlist, toggleWishlist } =
     useWishlist();
 
@@ -20,40 +20,45 @@ export default function Wishlist() {
   if (!showWishlist) return null;
 
   return ReactDOM.createPortal(
-    <div className="wishlist-overlay">
-      <div className="wishlist-container">
-        <div className="wishlist-header">
-          <h2>Preferiti</h2>
-          <ImCross onClick={toggleWishlist} className="close-icon" />
-        </div>
+    <>
+      {/* Aggiungi il backdrop scuro */}
+      <div className="wishlist-backdrop" onClick={toggleWishlist}></div>
 
-        {wishlist.length === 0 ? (
-          <div className="wishlist-empty">
-            <p>Non hai ancora aggiunto gin alla tua wishlist</p>
+      <div className="wishlist-overlay">
+        <div className="wishlist-container">
+          <div className="wishlist-header">
+            <h2>Preferiti</h2>
+            <ImCross onClick={toggleWishlist} className="close-icon" />
           </div>
-        ) : (
-          <div className="wishlist-items">
-            {wishlist.map((product) => (
-              <div key={product.id} className="wishlist-item">
-                <div className="wishlist-item-image">
-                  <img src={`/gin/${product.image}`} alt={product.title} />
+
+          {wishlist.length === 0 ? (
+            <div className="wishlist-empty">
+              <p>Non hai ancora aggiunto gin alla tua wishlist</p>
+            </div>
+          ) : (
+            <div className="wishlist-items">
+              {wishlist.map((product) => (
+                <div key={product.id} className="wishlist-item">
+                  <div className="wishlist-item-image">
+                    <img src={`/gin/${product.image}`} alt={product.title} />
+                  </div>
+                  <div className="wishlist-item-info">
+                    <h3>{product.title}</h3>
+                    <p>{product.typology}</p>
+                  </div>
+                  <button
+                    className="remove-btn"
+                    onClick={() => removeFromWishlist(product.id)}
+                  >
+                    <FaTrash />
+                  </button>
                 </div>
-                <div className="wishlist-item-info">
-                  <h3>{product.title}</h3>
-                  <p>{product.typology}</p>
-                </div>
-                <button
-                  className="remove-btn"
-                  onClick={() => removeFromWishlist(product.id)}
-                >
-                  <FaTrash />
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>,
+    </>,
     document.body
   );
 }

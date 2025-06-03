@@ -1,22 +1,21 @@
 //Type
 import type { Product } from "../types/ProductTypes";
-import type {ReactNode} from 'react'
+import type { ReactNode } from "react";
 //Import React
-import { createContext, useState, useEffect , useContext} from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 //Type con tutte le info e funzioni disponibili
 type WishlistContextType = {
   wishlist: Product[]; //Arrya che contiene i Gin aggiunti alla WishList
   addToWishlist: (product: Product) => void; //Funzione che aggiunge il gin alla WishList
-  removeFromWishlist: (productId: string | number) => void;//Funzione che rimuove il gin alla WishList
-  isInWishlist: (productId: string | number) => boolean; //Funzione che verifica se il gin è già nella wishlist
+  removeFromWishlist: (productId: string | number) => void; //Funzione che rimuove il gin alla WishList
+  isInWishlist: (productId: string | number | undefined) => boolean; //Funzione che verifica se il gin è già nella wishlist
   showWishlist: boolean; //Booleano er indicare se la wishlist è visibile o meno
   toggleWishlist: () => void; //È una funzione che cambia lo stato di visibilità della wishlist
 };
 
 //Contesto
 export const WishlistContext = createContext<WishlistContextType | null>(null);
-
 
 //PROVIDER
 export function WishlistProvider({ children }: { children: ReactNode }) {
@@ -25,7 +24,7 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   // Carica la wishlist dal localStorage all'avvio
   useEffect(() => {
-    const savedWishlist = localStorage.getItem('wishlist');
+    const savedWishlist = localStorage.getItem("wishlist");
     if (savedWishlist) {
       setWishlist(JSON.parse(savedWishlist));
     }
@@ -33,14 +32,14 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   // Wishlist collegata al LocalStorage
   useEffect(() => {
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
   }, [wishlist]);
 
   // Funzione per aggiungere un prodotto
   const addToWishlist = (product: Product) => {
-    setWishlist(prev => {
+    setWishlist((prev) => {
       // Controlla se il prodotto è già nella wishlist
-      if (!prev.some(item => item.id === product.id)) {
+      if (!prev.some((item) => item.id === product.id)) {
         return [...prev, product];
       }
       return prev;
@@ -49,28 +48,28 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 
   // Funzione per rimuovere un prodotto
   const removeFromWishlist = (productId: string | number) => {
-    setWishlist(prev => prev.filter(item => item.id !== productId));
+    setWishlist((prev) => prev.filter((item) => item.id !== productId));
   };
 
   // Funzione per verificare se un prodotto è nella wishlist
-  const isInWishlist = (productId: string | number) => {
-    return wishlist.some(item => item.id === productId);
+  const isInWishlist = (productId: string | number | undefined) => {
+    return wishlist.some((item) => item.id === productId);
   };
 
   // Funzione per mostrare/nascondere la wishlist
   const toggleWishlist = () => {
-    setShowWishlist(prev => !prev);
+    setShowWishlist((prev) => !prev);
   };
 
   return (
-    <WishlistContext.Provider 
-      value={{ 
-        wishlist, 
-        addToWishlist, 
-        removeFromWishlist, 
+    <WishlistContext.Provider
+      value={{
+        wishlist,
+        addToWishlist,
+        removeFromWishlist,
         isInWishlist,
         showWishlist,
-        toggleWishlist
+        toggleWishlist,
       }}
     >
       {children}
@@ -82,7 +81,9 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 export const useWishlist = () => {
   const context = useContext(WishlistContext);
   if (!context) {
-    throw new Error('useWishlist deve essere usato all\'interno di un WishlistProvider');
+    throw new Error(
+      "useWishlist deve essere usato all'interno di un WishlistProvider"
+    );
   }
   return context;
 };

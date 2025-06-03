@@ -4,6 +4,7 @@ import { GiHeartBottle } from "react-icons/gi";
 //Import React
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 //Hooks
 import useProduct from "../hooks/useProduct";
@@ -115,9 +116,9 @@ export default function DetailsPage() {
           </div>
         </div>
       </div>
-      <a className="compareText mt-3" href="/compare">
+      <Link  className="compareText mt-3" to="/compare">
         CONFRONTA GIN
-      </a>
+      </Link>
     </>
   );
 }

@@ -26,7 +26,12 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const savedWishlist = localStorage.getItem("wishlist");
     if (savedWishlist) {
-      setWishlist(JSON.parse(savedWishlist));
+      // Converte id in number per ogni prodotto
+      const parsed = JSON.parse(savedWishlist).map((item: any) => ({
+        ...item,
+        id: Number(item.id),
+      }));
+      setWishlist(parsed);
     }
   }, []);
 

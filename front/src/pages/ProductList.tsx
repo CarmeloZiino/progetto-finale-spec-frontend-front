@@ -165,7 +165,7 @@ export default function ProductList() {
               onClick={handleSortClick}
               style={{
                 cursor: "pointer",
-                fontSize: "18pt",
+                fontSize: "1.7rem",
                 borderBottom: "2px solid",
                 paddingBottom: "5.5px",
               }}
@@ -175,7 +175,7 @@ export default function ProductList() {
               onClick={handleSortClick}
               style={{
                 cursor: "pointer",
-                fontSize: "18pt",
+                fontSize: "1.7rem",
                 borderBottom: "2px solid",
                 paddingBottom: "5.5px",
               }}

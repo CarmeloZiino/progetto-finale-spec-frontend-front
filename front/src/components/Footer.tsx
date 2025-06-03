@@ -1,6 +1,6 @@
 //icon
 import { GiHeartBottle } from "react-icons/gi";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </a>
             <a href="https://www.linkedin.com/in/carmelo-ziino-773b17195/">
-              <FiLinkedin
+              <FaLinkedinIn
                 style={{ fontSize: "2rem", color: "var(--brand-warm-brown)" }}
               />
             </a>

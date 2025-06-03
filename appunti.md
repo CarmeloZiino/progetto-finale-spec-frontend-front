@@ -1,9 +1,9 @@
 martedì 3 giugno:
 
-- Card Cliccabili
-- Da implementare funzione per la quale, qualsiasi cosa clicchi al di fuori della wishlist, essa viene chiusa.
-- Aggiungere icon wishlist alla Pagina di dettaglio + logica per il funzionamento
-- Modifcare css Modale Wishlist
+ok - Card Cliccabili
+ok - Da implementare funzione per la quale, qualsiasi cosa clicchi al di fuori della wishlist, essa viene chiusa.
+ok - Aggiungere icon wishlist alla Pagina di dettaglio + logica per il funzionamento
+ok - Modifcare css Modale Wishlist
 - Scrivere bozza di Logica per funzionamento Comparatore
 
 mercoledì 4 giugno

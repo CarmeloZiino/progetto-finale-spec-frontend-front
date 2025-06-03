@@ -10,6 +10,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 //Pages
 import ProductList from "./pages/ProductList";
 import DetailsPage from "./pages/DetailsPage";
+import ComparePage from "./pages/ComparePage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route Component={DefaultLayout}>
                 <Route path="/" Component={ProductList} />
                 <Route path="/:id" Component={DetailsPage} />
+                <Route path="/compare" Component={ComparePage} />
               </Route>
             </Routes>
           </BrowserRouter>

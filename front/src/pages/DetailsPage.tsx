@@ -55,7 +55,7 @@ export default function DetailsPage() {
           id="wishIcon"
           style={{
             fontSize: "25px",
-            color: isProductInWishlist ? "red" : "blue",
+            color: isProductInWishlist ? "red" : "dark",
           }}
           onClick={handleAddToWishlist}
         />

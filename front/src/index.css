@@ -1,8 +1,3 @@
-/* Font e Typografy */
-* {
-  font-family: "Lora", serif !important;
-}
-
 /* BackGround and ColorText*/
 
 body {
@@ -25,8 +20,6 @@ header {
   top: 0;
   z-index: 1;
 }
-
-
 
 .navIcon {
   background-color: #f7f5ed;
@@ -102,7 +95,7 @@ header {
   z-index: 2;
   top: 22vh;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   padding: 10px; /* Spazio interno */
   border-radius: 5pt; /* Arrotonda i bordi */
 }
@@ -145,4 +138,17 @@ header {
 
 #wishIcon:hover {
   color: var(--state-error);
+}
+
+/* Media query per desktop */
+@media (min-width: 992px) {
+  header {
+    height: 30vh;
+  }
+
+  #searchBar {
+    position: fixed;
+    z-index: 2;
+    top: 27vh;
+  }
 }

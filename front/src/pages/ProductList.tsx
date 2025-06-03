@@ -100,7 +100,7 @@ export default function ProductList() {
       <SearchBar />
       <Carousel />
       <div className="mb-4 d-flex align-items-center justify-content-between">
-        <h1 className="mb">i nostri gin</h1>
+        <h1 className="mb western-text">i Nostri Gin</h1>
         <div className="filterAndOrder d-flex justify-content-center align-items-center gap-3">
           <div className="position-relative" ref={filterMenuRef}>
             {/* Menù a tendina, Filtro per Metodo. Ps. essendo che le Categorie rappresentano un unico prodotto (GIN) ho filtrato per il metodo di distillazione */}

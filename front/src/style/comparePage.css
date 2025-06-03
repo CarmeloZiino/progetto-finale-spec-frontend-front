@@ -1,8 +1,11 @@
 .dropdown {
-  width: 250px;
+  width: 200px;
+  height: 50px;
   background-color: var(--input-bg);
   border: 1px solid var(--input-border);
-  padding: 3px;
+  padding: 5px;
+  font-size: 10pt;
+  text-align: center;
   border-radius: 5px;
   box-shadow: var(--shadow-soft);
   transition: all 0.2s ease;
@@ -24,8 +27,30 @@
   }
 }
 
-.tableDetails{
-  min-width: 160px;
-  position: relative;
-  top: 20vh;
+.singleDropdown {
+  padding: 15px 5px 15px 5px;
+  border: 2px solid var(--card-subtitle);
+  background-color: var(--color-cloud);
+  border-radius: 10pt;
+  box-shadow: var(--shadow-strong);
+}
+
+.singleDetail {
+  color: var(--brand-warm-brown);
+  text-shadow: var(--shadow-medium);
+  padding-inline: 10px;
+  border-radius: 6pt;
+}
+
+.singleDetail > p {
+  color: var(--brand-dark-brown);
+}
+
+.singleDetail > p {
+  margin: 0px !important;
+}
+
+.nameProduct {
+  font-size: 1.4rem;
+  font-weight: 900 !important;
 }

@@ -42,7 +42,7 @@
 
   --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Per card, elementi statici */
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15); /* Hover interattivi */
-  --shadow-strong: 0 6px 16px rgba(0, 0, 0, 0.2);  /* Modal, componenti floating */
+  --shadow-strong: 0 6px 16px rgba(0, 0, 0, 0.3);  /* Modal, componenti floating */
 
   /* ===============
      HEADER

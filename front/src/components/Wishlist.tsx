@@ -27,7 +27,7 @@ export default function Wishlist() {
       <div className="wishlist-overlay">
         <div className="wishlist-container">
           <div className="wishlist-header">
-            <h2>Preferiti</h2>
+            <h2 className="western-text" style={{fontSize: "2.5rem !important" , color: "var(--brand-dark-brown)"}}>Preferiti</h2>
             <ImCross onClick={toggleWishlist} className="close-icon" />
           </div>
 

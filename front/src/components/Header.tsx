@@ -24,8 +24,11 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg d-none d-lg-block">
           <div className="container d-flex flex-column justify-content-center align-items-center gap-2">
             {/* LOGO CENTRATO */}
-            <Link className="navbar-brand d-flex justify-content-center align-items-center mb-2" to="/">
-              <img src={logo} width={115} className="rounded-3" alt="LOGO" />
+            <Link
+              className="navbar-brand d-flex justify-content-center align-items-center mb-2"
+              to="/"
+            >
+              <img src={logo} width={200} className="rounded-3" alt="LOGO" />
             </Link>
 
             {/* Menu desktop sotto il logo */}
@@ -38,7 +41,10 @@ export default function Header() {
                   style={{ cursor: "pointer" }}
                 >
                   <div className="position-relative">
-                    <GiHeartBottle className="icon" />
+                    <GiHeartBottle
+                      className="icon"
+                      style={{ fontSize: "2rem" }}
+                    />
                     {wishlist.length > 0 && (
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         {wishlist.length}
@@ -52,9 +58,9 @@ export default function Header() {
               <div>
                 <Link
                   className="navBtnLink d-flex flex-column justify-content-center align-items-center"
-                  to=""
+                  to="/compare"
                 >
-                  <MdCompare className="icon" />
+                  <MdCompare className="icon" style={{ fontSize: "2rem" }} />
                   <p>Compare</p>
                 </Link>
               </div>
@@ -63,44 +69,44 @@ export default function Header() {
         </nav>
 
         {/* VERSIONE MOBILE - visibile solo su schermi inferiori a lg */}
-        <nav className="navbar d-block d-lg-none">
-          <div className="container-fluid d-flex flex-column justify-contente-center align-items-end">
+        <div className="container d-lg-none d-flex justify-content-center align-items-center h-100">
+          {/* Menu mobile in colonna senza testo */}
+          <div className="d-flex align-items-center justify-items-center gap-3 mt-2">
+            {/*COMPARE - solo icona */}
+            <div>
+              <Link
+                to="/compare"
+                className="navBtnLink d-flex justify-content-center align-items-center"
+              >
+                <MdCompare className="icon" style={{ fontSize: "2.8rem" }} />
+              </Link>
+            </div>
             {/* LOGO più piccolo */}
             <Link to="/" className="">
-              <img src={logo} width={38} className="rounded-3" alt="LOGO" />
+              <img src={logo} width={140} className="rounded-3" alt="LOGO" />
             </Link>
-
-            {/* Menu mobile in colonna senza testo */}
-            <div className="navbar-icon d-flex flex-column gap-3 mt-2">
-              {/* WISHLIST - solo icona */}
-              <div>
-                <a
-                  className="navBtnLink d-flex justify-content-center align-items-center"
-                  onClick={toggleWishlist}
-                  style={{ cursor: "pointer" }}
-                >
-                  <div className="position-relative">
-                    <GiHeartBottle className="icon" />
-                    {wishlist.length > 0 && (
-                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {wishlist.length}
-                      </span>
-                    )}
-                  </div>
-                </a>
-              </div>
-              {/*COMPARE - solo icona */}
-              <div>
-                <Link
-                  to=""
-                  className="navBtnLink d-flex justify-content-center align-items-center"
-                >
-                  <MdCompare className="icon" />
-                </Link>
-              </div>
+            {/* WISHLIST - solo icona */}
+            <div>
+              <a
+                className="navBtnLink d-flex justify-content-center align-items-center"
+                onClick={toggleWishlist}
+                style={{ cursor: "pointer" }}
+              >
+                <div className="position-relative">
+                  <GiHeartBottle
+                    className="icon"
+                    style={{ fontSize: "2.8rem" }}
+                  />
+                  {wishlist.length > 0 && (
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      {wishlist.length}
+                    </span>
+                  )}
+                </div>
+              </a>
             </div>
           </div>
-        </nav>
+        </div>
       </header>
       {/* WishList */}
       <Wishlist />

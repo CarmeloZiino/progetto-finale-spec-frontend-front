@@ -38,24 +38,50 @@ export default function CompareDropDown() {
             );
             return selectedProduct ? (
               <div
-                className="d-flex flex-column align-items-center gap-2 product-card"
+                className="singleDropdown d-flex flex-column align-items-center gap-4 product-card"
                 key={selectedProduct.id}
               >
                 <img
                   src={`/gin/${selectedProduct.image}`}
                   alt={`Img ${selectedProduct.title}`}
-                  style={{ width: "150px", borderRadius: "10pt" }}
+                  style={{
+                    height: "100px",
+                    borderRadius: "10pt",
+                    border: "1px solid var(--input-border)",
+                  }}
                 />
-                <p>{selectedProduct.title}</p>
-                <p>{selectedProduct.category}</p>
-                <p>{selectedProduct.format}</p>
+                <div className="singleDetail mb-4">
+                  <p className="text-center nameProduct">
+                    {selectedProduct.title}
+                  </p>
+                </div>
 
-                <p>{selectedProduct.alcolContent}%</p>
-                <p>{selectedProduct.origin}</p>
-                <p>{selectedProduct.typology}</p>
-                <p className="text-center" style={{ width: "150px" }}>
-                  {selectedProduct.taste}
-                </p>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span>Tipo di distillato: </span>
+                  <p>{selectedProduct.category}</p>
+                </div>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span>Formato: </span>
+                  <p>{selectedProduct.format}</p>
+                </div>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span>Grado Alcolemico: </span>
+                  <p>{selectedProduct.alcolContent}%</p>
+                </div>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span>Provenienza: </span>
+                  <p>{selectedProduct.origin}</p>
+                </div>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span className="text-center">Metodo di distillazione: </span>
+                  <p>{selectedProduct.typology}</p>
+                </div>
+                <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+                  <span>Gusto e Aroma: </span>
+                  <p className="text-center" style={{ width: "150px" }}>
+                    {selectedProduct.taste}
+                  </p>
+                </div>
               </div>
             ) : (
               <p>Prodotto non trovato</p>
@@ -68,3 +94,5 @@ export default function CompareDropDown() {
     </>
   );
 }
+
+<div></div>;

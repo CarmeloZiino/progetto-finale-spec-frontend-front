@@ -6,23 +6,31 @@ import CompareDropDown from "../components/CompareDropDown";
 export default function ComparePage() {
   return (
     <>
-      <div>
-        <h1>Confronta i nostri Gin</h1>
-      </div>
-      <div className="d-flex gap-3 block-dropdown">
-        <div className="tableDetails d-flex flex-column gap-3">
-          <p>Tipologia Distillato:</p>
-          <p>Formato bottiglia:</p>
-          <p>Gradazione Alcolica:</p>
-          <p>Provenienza:</p>
-          <p>Metodo distillazione:</p>
-          <p>Gusto e aroma:</p>
-        </div>
-        <div>
-          <CompareDropDown />
-        </div>
-        <div>
-          <CompareDropDown />
+      <div className="d-flex flex-column align-items-center">
+        <h1
+          className="western-text"
+          style={{
+            fontSize: "2rem",
+            color: "var(--brand-gold-muted)",
+            textShadow:
+              "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+          }}
+        >
+          Confronta i nostri Gin
+        </h1>
+        <div className="d-flex gap-3 block-dropdown">
+          <div>
+            <CompareDropDown />
+          </div>
+          <div>
+            <CompareDropDown />
+          </div>
+          <div className="d-none d-md-block">
+            <CompareDropDown />
+          </div>
+          <div className="d-none d-lg-block">
+            <CompareDropDown />
+          </div>
         </div>
       </div>
     </>

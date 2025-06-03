@@ -28,7 +28,13 @@ export default function Header() {
               className="navbar-brand d-flex justify-content-center align-items-center mb-2"
               to="/"
             >
-              <img src={logo} width={200} className="rounded-3" alt="LOGO" />
+              <img
+                src={logo}
+                width={200}
+                className="rounded-3"
+                alt="LOGO"
+                id="logo"
+              />
             </Link>
 
             {/* Menu desktop sotto il logo */}
@@ -83,7 +89,13 @@ export default function Header() {
             </div>
             {/* LOGO più piccolo */}
             <Link to="/" className="">
-              <img src={logo} width={140} className="rounded-3" alt="LOGO" />
+              <img
+                src={logo}
+                width={140}
+                className="rounded-3"
+                alt="LOGO"
+                id="logo"
+              />
             </Link>
             {/* WISHLIST - solo icona */}
             <div>

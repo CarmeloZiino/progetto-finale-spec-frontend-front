@@ -10,10 +10,7 @@ export default function ComparePage() {
         <h1
           className="western-text"
           style={{
-            fontSize: "2rem",
-            color: "var(--brand-gold-muted)",
-            textShadow:
-              "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+            fontSize: "3.5rem",
           }}
         >
           Confronta i nostri Gin

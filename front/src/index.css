@@ -151,4 +151,38 @@ header {
     z-index: 2;
     top: 27vh;
   }
+
+  .icon {
+    font-size: 3rem !important;
+  }
+}
+
+/* LOGO */
+#logo {
+  transition: all 0.5s ease;
+  transform-origin: center;
+  position: relative;
+}
+
+#logo:hover {
+  animation: saloon-sign 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px var(--brand-warm-brown));
+}
+
+@keyframes saloon-sign {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(2deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(-1deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }

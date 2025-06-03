@@ -48,7 +48,7 @@ export default function DetailsPage() {
   return (
     <>
       <div className="d-flex align-items-center justify-content-between">
-        <h1 className="titleDetails text-center text-md-start mb-3">
+        <h1 className="titleDetails text-center text-md-start mb-3 western-text">
           {singleProduct.product.title}
         </h1>
         <GiHeartBottle
@@ -115,7 +115,7 @@ export default function DetailsPage() {
           </div>
         </div>
       </div>
-      <a className="compareText mt-3" href="">
+      <a className="compareText mt-3" href="/compare">
         CONFRONTA GIN
       </a>
     </>

@@ -36,7 +36,6 @@ strong {
 
 .titleDetails {
   font-size: 3rem;
-  color: var(--brand-copper);
   text-shadow: var(--shadow-medium);
   font-weight: bolder;
 }

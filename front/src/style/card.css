@@ -22,6 +22,7 @@
   color: #000;
 }
 
+
 .cover {
   background-color: white;
   top: 0;
@@ -60,6 +61,7 @@
   -ms-transform: rotatey(-80deg);
   transform: rotatey(-80deg);
 }
+
 
 p {
   font-size: 16px;

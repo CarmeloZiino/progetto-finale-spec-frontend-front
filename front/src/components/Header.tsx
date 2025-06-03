@@ -107,7 +107,7 @@ export default function Header() {
                 <div className="position-relative">
                   <GiHeartBottle
                     className="icon"
-                    style={{ fontSize: "2.8rem" }}
+                    style={{ fontSize: "3rem" }}
                   />
                   {wishlist.length > 0 && (
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

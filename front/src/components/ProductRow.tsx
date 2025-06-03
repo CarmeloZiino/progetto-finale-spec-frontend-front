@@ -34,20 +34,21 @@ export default function ProductRow({
   };
 
   return (
-    <div className="book " key={id}>
+    <div className="book" key={id}>
       <div>
-        <Link to={`/${id}`} className="text-decoration-none text-black">
-          <span>Provenienza:</span> <p>{origin}</p>
-          <span>Metodo:</span>
-          <p>{typology}</p>
+        <Link to={`/${id}`} className=" text-decoration-none text-dark">
+          <span style={{ fontSize: "1.4rem" }}>Provenienza:</span>{" "}
+          <p style={{ fontSize: "1.4rem" }}>{origin}</p>
+          <span style={{ fontSize: "1.4rem" }}>Metodo:</span>
+          <p style={{ fontSize: "1.4rem" }}>{typology}</p>
         </Link>
         <GiHeartBottle
           id="wishIcon"
           style={{
             fontSize: "25px",
             position: "relative",
-            left: "125px",
-            top: "40px",
+            left: "140px",
+            top: "15px",
             color: isProductInWishlist ? "red" : "black",
             transition: "color 0.3s ease",
           }}

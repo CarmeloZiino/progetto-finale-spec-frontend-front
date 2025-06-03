@@ -1,5 +1,10 @@
 //Import Essenziali
 
+//Componenete Wishlist
+import Wishlist from "./Wishlist";
+//Hook WishList
+import { useWishlist } from "../context/WishlistContext";
+
 //Logo
 import logo from "../assets/GintasticDue.png";
 
@@ -8,6 +13,9 @@ import { GiHeartBottle } from "react-icons/gi";
 import { MdCompare } from "react-icons/md";
 
 export default function Header() {
+  //Import essenziali Wishlist
+  const { toggleWishlist, wishlist } = useWishlist();
+
   return (
     <>
       <header className="p-2">
@@ -15,7 +23,7 @@ export default function Header() {
         <nav className="navbar navbar-expand-lg d-none d-lg-block">
           <div className="container-fluid d-flex justify-content-start">
             {/* LOGO */}
-            <a className="navbar-brand " href="#">
+            <a className="navbar-brand " href="/">
               <img src={logo} width={75} className="rounded-3" alt="LOGO" />
             </a>
 
@@ -25,9 +33,17 @@ export default function Header() {
               <div>
                 <a
                   className="navBtnLink d-flex flex-column justify-content-center align-items-center"
-                  href=""
+                  onClick={toggleWishlist}
+                  style={{ cursor: "pointer" }}
                 >
-                  <GiHeartBottle className="icon" />
+                  <div className="position-relative">
+                    <GiHeartBottle className="icon" />
+                    {wishlist.length > 0 && (
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {wishlist.length}
+                      </span>
+                    )}
+                  </div>
                   <p>Wishlist</p>
                 </a>
               </div>
@@ -59,9 +75,17 @@ export default function Header() {
               <div>
                 <a
                   className="navBtnLink d-flex justify-content-center align-items-center"
-                  href=""
+                  onClick={toggleWishlist}
+                  style={{ cursor: "pointer" }}
                 >
-                  <GiHeartBottle className="icon" />
+                  <div className="position-relative">
+                    <GiHeartBottle className="icon" />
+                    {wishlist.length > 0 && (
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {wishlist.length}
+                      </span>
+                    )}
+                  </div>
                 </a>
               </div>
               {/*COMPARE - solo icona */}
@@ -77,6 +101,8 @@ export default function Header() {
           </div>
         </nav>
       </header>
+      {/* WishList */}
+      <Wishlist />
     </>
   );
 }

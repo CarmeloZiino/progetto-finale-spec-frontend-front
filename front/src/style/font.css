@@ -1,2 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora:wght@400;600&display=swap");
 
+strong {
+  color: var(--accent-burgundy);
+  font-size: 1.3rem;
+}
+
+.details {
+  color: var(--accent-green-olive);
+  font-size: 1.3rem;
+}
+
+.titleDetails {
+  font-size: 3rem;
+  color: var(--brand-copper);
+  text-shadow: var(--shadow-medium);
+  font-weight: bolder;
+}
+
+.compareText{
+  display: flex;
+justify-content: end;
+
+padding: 10px;
+margin-top: 5px;
+font-weight: 900;
+
+color: var(--text-main);
+}
+
+.compareText:hover{
+  color: var(--accent-burgundy);
+  
+
+}

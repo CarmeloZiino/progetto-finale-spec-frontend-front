@@ -18,6 +18,7 @@ import { FaFilter } from "react-icons/fa";
 import type { FilterTypology } from "../types/filterTypology";
 
 export default function ProductList() {
+
   const {
     filteredProducts,
     sortOrder,

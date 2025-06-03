@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+appunti.md
+workflow.md
 .env

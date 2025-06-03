@@ -1,0 +1,86 @@
+//Import React
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+
+//Hooks
+import useProduct from "../hooks/useProduct";
+
+export default function DetailsPage() {
+  const { id } = useParams<{ id: string }>();
+  const { fetchSingleProduct, singleProduct } = useProduct();
+
+  useEffect(() => {
+    if (id) {
+      fetchSingleProduct(id);
+    }
+  }, [id]);
+
+  if (!singleProduct || !singleProduct.product) {
+    return <div>Caricamento in corso...</div>;
+  }
+  return (
+    <>
+      <h1 className="titleDetails text-center text-md-start mb-3">
+        {singleProduct.product.title}
+      </h1>
+      <div
+        className="cardDetails d-flex flex-column flex-md-row gap-3 justify-content-center align-items-stretch"
+        key={singleProduct.product.id}
+      >
+        <div className="mb-4 mb-md-0 col-12 col-md-6 d-flex align-items-center justify-content-center">
+          <img
+            src={`/gin/${singleProduct.product.image}`}
+            alt={singleProduct.product.title}
+            style={{
+              width: "100%",
+              maxWidth: "400px",
+              borderRadius: "10pt",
+              boxShadow: "var(--shadow-medium)",
+            }}
+          />
+        </div>
+        <div className="infoDetails col-12 col-md-6 d-flex flex-column justify-content-center py-3 py-md-4">
+          <div className="row g-2 mb-2">
+            <div className="col-12 col-md-6">
+              <p className="details mb-0">
+                Tipo di distillato:
+                <strong> {singleProduct.product.category}</strong>
+              </p>
+            </div>
+            <div className="col-12 col-md-6">
+              <p className="details mb-0">
+                Provenienza: <strong> {singleProduct.product.origin}</strong>
+              </p>
+            </div>
+          </div>
+
+          <p className="details mb-2">
+            Gusto e Aromi: <strong>{singleProduct.product.taste}</strong>
+          </p>
+
+          <p className="details mb-2">
+            Metodo di distillazione:
+            <strong> {singleProduct.product.typology}</strong>
+          </p>
+
+          <div className="row g-2">
+            <div className="col-12 col-md-6">
+              <p className="details mb-0">
+                Grado Alcolemico:
+                <strong> {singleProduct.product.alcolContent}%</strong>
+              </p>
+            </div>
+            <div className="col-12 col-md-6">
+              <p className="details mb-0">
+                Formato: <strong>{singleProduct.product.format}</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a className="compareText mt-3" href="">
+        CONFRONTA GIN
+      </a>
+    </>
+  );
+}

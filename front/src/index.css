@@ -11,7 +11,7 @@ body {
 
 /* Header */
 header {
-  height: 25vh;
+  height: 20vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -102,4 +102,27 @@ header {
 .btnSearch:hover {
   background-color: var(--brand-gold-muted);
   color: var(--btn-primary-text);
+}
+
+/* PAGINA DI DETTAGLIO */
+.cardDetails {
+  background-color: var(--color-cloud);
+  box-shadow: var(--shadow-strong);
+  border-radius: 10pt;
+  padding: 1.5rem;
+  margin: auto;
+  box-sizing: content-box;
+}
+
+.infoDetails {
+  padding: 2.2rem;
+  border-radius: 10pt;
+  background-color: rgba(255, 255, 255, 0.648) !important;
+}
+
+
+/* WISHICON */
+
+#wishIcon:hover{
+color: var(--state-error);
 }

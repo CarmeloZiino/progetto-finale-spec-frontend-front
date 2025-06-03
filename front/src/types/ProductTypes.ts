@@ -23,7 +23,7 @@ type ItalianRegion =
 export type Product = {
   id: number;
   title: string;
-  category: string;
+  category?: string;
   format?: string;
   origin: ItalianRegion; // Qui utilizziamo il nuovo tipo
   typology: string;

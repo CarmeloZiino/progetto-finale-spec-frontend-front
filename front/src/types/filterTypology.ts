@@ -1,6 +1,6 @@
 export type FilterTypology =
   | "Tutti"
-  | "London Dry Gin"
+  | "London Dry"
   | "Dry Gin"
   | "Distilled Gin"
   | "Italian Dry Gin"

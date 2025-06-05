@@ -10,15 +10,21 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(
-      rgba(59, 59, 59, 0.4),
-      rgba(59, 59, 59, 0.4)
-    ),
+  background-image: linear-gradient(rgba(58, 46, 43, 0.55)),
     url("./assets/headerBG.jpg") !important;
   box-shadow: var(--shadow-strong);
   position: sticky;
   top: 0;
   z-index: 1;
+  
+
+}
+
+#mainBg{
+    background-image: linear-gradient(rgba(211, 208, 207, 0.7)),
+    url("./assets/bg.jpg") !important;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .navIcon {
@@ -106,16 +112,10 @@ header {
   box-shadow: var(--shadow-medium);
 }
 
-.btnSearch {
-  background-color: var(--color-paper);
-  border-radius: 5pt;
-  border: 1px solid var(--color-stone);
-  box-shadow: var(--shadow-medium);
-}
 
-.btnSearch:hover {
-  background-color: var(--brand-gold-muted);
-  color: var(--btn-primary-text);
+.titleListProduct{
+
+  border-bottom: 1px solid var(--brand-warm-brown);
 }
 
 /* PAGINA DI DETTAGLIO */

@@ -1,5 +1,5 @@
 //Import React
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 //Import Components
 import ProductRow from "../components/ProductRow";
@@ -18,7 +18,7 @@ import { FaFilter } from "react-icons/fa";
 import type { FilterTypology } from "../types/filterTypology";
 
 export default function ProductList() {
-
+  //IMPORT DAL GLOBALCONTEXT
   const {
     filteredProducts,
     sortOrder,
@@ -26,13 +26,14 @@ export default function ProductList() {
     activeFilter,
     setActiveFilter,
   } = useGlobalContext();
+
+  //State per la visibilità del Menù di Filtraggio
   const [showFilterMenu, setShowFilterMenu] = useState(false);
-  const filterMenuRef = useRef(null);
 
   // Opzioni di filtro basate sulle tipologie di gin
   const filterOptions: FilterTypology[] = [
     "Tutti",
-    "London Dry Gin",
+    "London Dry",
     "Dry Gin",
     "Distilled Gin",
     "Italian Dry Gin",
@@ -52,9 +53,9 @@ export default function ProductList() {
       }
     }
 
-    // Aggiungi l'event listener solo se il menu è aperto
+    // Se il menù è aperto:
     if (showFilterMenu) {
-      // Breve timeout per evitare che l'evento di click che apre il menu lo chiuda immediatamente
+      // Breve timeout per evitare che l'evento di click che apre il menu lo chiuda immediatamente (e che crashi la pagina)
       const timeoutId = setTimeout(() => {
         document.addEventListener("click", handleGlobalClick);
       }, 100);
@@ -76,21 +77,13 @@ export default function ProductList() {
     }
   };
 
-  // Funzione per aprire il menù a tendina con stopPropagation
-  const handleFilterClick = (
-    event: React.MouseEvent<SVGElement, MouseEvent>
-  ) => {
-    // Impedisci all'evento click di propagarsi al documento
-    event.stopPropagation();
+  // Funzione per aprire il menù a tendina
+  const handleFilterClick = () => {
     setShowFilterMenu(!showFilterMenu);
   };
 
-  // Anche per il click sulle opzioni del menu, aggiungi stopPropagation
-  const handleFilterSelect = (
-    option: FilterTypology,
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    event.stopPropagation();
+  // Funzione per il click sulle opzioni del menu
+  const handleFilterSelect = (option: FilterTypology) => {
     setActiveFilter(option);
     setShowFilterMenu(false);
   };
@@ -99,10 +92,10 @@ export default function ProductList() {
     <>
       <SearchBar />
       <Carousel />
-      <div className="mb-4 d-flex align-items-center justify-content-between">
+      <div className="titleListProduct mb-4 d-flex align-items-center justify-content-between">
         <h1 className="mb western-text">i Nostri Gin</h1>
         <div className="filterAndOrder d-flex justify-content-center align-items-center gap-3">
-          <div className="position-relative" ref={filterMenuRef}>
+          <div className="position-relative">
             {/* Menù a tendina, Filtro per Metodo. Ps. essendo che le Categorie rappresentano un unico prodotto (GIN) ho filtrato per il metodo di distillazione */}
             <FaFilter
               onClick={handleFilterClick}
@@ -133,7 +126,7 @@ export default function ProductList() {
                   {filterOptions.map((option, index) => (
                     <button
                       key={index}
-                      onClick={(e) => handleFilterSelect(option, e)}
+                      onClick={(e) => handleFilterSelect(option)}
                       className={`btn btn-sm text-start mb-1 ${
                         activeFilter === option ? "fw-bold" : ""
                       }`}

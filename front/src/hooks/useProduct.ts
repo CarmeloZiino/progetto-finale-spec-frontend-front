@@ -1,9 +1,7 @@
-//IMPORT REACT e VITE
+//IMPORT REACT
 import { useState, useEffect, useCallback } from "react";
-
 //Import Type
 import type { Product } from "../types/ProductTypes";
-
 //URL CHIAMATA API
 const url = import.meta.env.VITE_API_URL;
 

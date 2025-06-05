@@ -2,7 +2,7 @@
 import ReactDOM from "react-dom";
 
 //Context
-import { useWishlist } from "../context/WishlistContext";
+import { useContextWishlist } from "../context/WishlistContext";
 
 //React Icon
 import { ImCross } from "react-icons/im";
@@ -14,7 +14,7 @@ import "../style/wishlist.css";
 export default function Wishlist() {
   //Importo le funzioni dal contesto
   const { wishlist, removeFromWishlist, showWishlist, toggleWishlist } =
-    useWishlist();
+    useContextWishlist();
 
   // Se la wishlist non è visibile, non renderizziamo nulla (e ci mancherebbe)
   if (!showWishlist) return null;

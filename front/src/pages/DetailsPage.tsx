@@ -8,20 +8,18 @@ import { Link } from "react-router-dom";
 
 //Hooks
 import useProduct from "../hooks/useProduct";
-import { useWishlist } from "../context/WishlistContext";
+import { useContextWishlist } from "../context/WishlistContext";
 
 export default function DetailsPage() {
   const { id } = useParams<{ id: string }>();
+  //Import dall'Hook
   const { fetchSingleProduct, singleProduct } = useProduct();
-
+  //Per recuperare i dati dal Back-end
   useEffect(() => {
-    if (id) {
-      fetchSingleProduct(id);
-    }
-  }, [id]);
+    if (id) {fetchSingleProduct(id);}}, [id]);
 
   //Funzioni dalla wishlist
-  const { addToWishlist, isInWishlist } = useWishlist();
+  const { addToWishlist, isInWishlist } = useContextWishlist();
 
   // Verifica se il prodotto è già nella wishlist
   const isProductInWishlist = isInWishlist(singleProduct?.product.id);
@@ -42,6 +40,7 @@ export default function DetailsPage() {
     addToWishlist(productToAdd);
   };
 
+  //NOTA: Bisogna ribadire la condizione prima del return, altrimenti non reinderizza correttamente
   if (!singleProduct || !singleProduct.product) {
     return <div>Caricamento in corso...</div>;
   }
@@ -52,6 +51,7 @@ export default function DetailsPage() {
         <h1 className="titleDetails text-center text-md-start mb-3 western-text">
           {singleProduct.product.title}
         </h1>
+        {/* WishIcon */}
         <GiHeartBottle
           id="wishIcon"
           style={{
@@ -116,7 +116,7 @@ export default function DetailsPage() {
           </div>
         </div>
       </div>
-      <Link  className="compareText mt-3" to="/compare">
+      <Link className="compareText mt-3" to="/compare">
         CONFRONTA GIN
       </Link>
     </>

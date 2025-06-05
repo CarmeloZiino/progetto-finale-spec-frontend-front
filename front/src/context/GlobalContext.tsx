@@ -1,3 +1,4 @@
+//Import Essenziali
 import React, { createContext, useContext, useState, useMemo } from "react";
 //Import Hooks
 import useProduct from "../hooks/useProduct";
@@ -10,6 +11,8 @@ type GlobalContextType = {
   // Prodotti e ricerca
   products: Product[];
   filteredProducts: Product[];
+
+  //Imput di Ricerca
   searchQuery: string;
   setSearchQuery: (query: string) => void;
 
@@ -32,29 +35,32 @@ type GlobalProviderProps = {
 
 // COMPONENTE PROVIDER
 export function GlobalProvider({ children }: GlobalProviderProps) {
-  // Importiamo i prodotti dal hook esistente
+  // Import deii prodotti dal hook esistent
   const { products } = useProduct();
 
   // Stati per la ricerca e l'ordinamento
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""); //Input
   const [sortOrder, setSortOrder] = useState<"default" | "cres" | "dec">(
     "default"
-  );
-  const [activeFilter, setActiveFilter] = useState<FilterTypology>("Tutti");
+  ); //Order Alfabetico
+  const [activeFilter, setActiveFilter] = useState<FilterTypology>("Tutti"); //Order per Metodo
 
-  // Prodotti filtrati e ordinati
+  // Prodotti filtrati dall'input
   const filteredProducts = useMemo(() => {
-    // Prima filtriamo in base alla ricerca
+    // Filtro i dati dall'input
     let filtered = products.filter((p) =>
-      p.title.toLowerCase().includes(searchQuery.toLowerCase())
+      p.title
+        .toLowerCase()
+        .replace(/[ .-]/g, "")
+        .includes(searchQuery.toLowerCase())
     );
 
-    // Poi filtriamo per tipologia
+    // Condizione per il Filtraggio
     if (activeFilter !== "Tutti") {
       filtered = filtered.filter((p) => p.typology === activeFilter);
     }
 
-    // Infine ordiniamo
+    // Condizioni per Order Alfabetico
     if (sortOrder === "default") {
       return filtered;
     } else if (sortOrder === "cres") {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //Componenete Wishlist
 import Wishlist from "./Wishlist";
 //Hook WishList
-import { useWishlist } from "../context/WishlistContext";
+import { useContextWishlist } from "../context/WishlistContext";
 
 //Logo
 import logo from "../assets/GintasticDue.png";
@@ -15,7 +15,7 @@ import { MdCompare } from "react-icons/md";
 
 export default function Header() {
   //Import essenziali Wishlist
-  const { toggleWishlist, wishlist } = useWishlist();
+  const { toggleWishlist, wishlist } = useContextWishlist();
 
   return (
     <>

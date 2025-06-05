@@ -13,7 +13,9 @@ export default function SearchBar() {
   const { setSearchQuery } = useGlobalContext();
 
   const handleSearch = useDebounce((value: string) => {
-    setSearchQuery(value);
+    const valueClean: string = value.replace(/[ .-]/g, "");
+
+    setSearchQuery(valueClean);
   }, 500);
 
   return (
@@ -33,7 +35,6 @@ export default function SearchBar() {
           handleSearch(e.target.value);
         }}
       />
-   
     </form>
   );
 }

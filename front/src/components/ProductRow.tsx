@@ -3,8 +3,7 @@ import type { Product } from "../types/ProductTypes";
 //React ICON
 import { GiHeartBottle } from "react-icons/gi";
 //HOOK
-import { useWishlist } from "../context/WishlistContext";
-
+import { useContextWishlist } from "../context/WishlistContext";
 //Import React
 import { Link } from "react-router-dom";
 
@@ -15,13 +14,12 @@ export default function ProductRow({
   typology,
   image,
 }: Product) {
-  //Funzioni dalla wishlist
-  const { addToWishlist, isInWishlist } = useWishlist();
+  //Funzioni dall'hook wishlist
+  const { addToWishlist, isInWishlist } = useContextWishlist();
 
   // Verifica se il prodotto è già nella wishlist
   const isProductInWishlist = isInWishlist(id);
-  console.log(isInWishlist(id));
-
+//Funzione di Aggiunta Prodotto alla Wishlist
   const handleAddToWishlist = () => {
     const productToAdd = {
       id,

@@ -83,11 +83,11 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
 }
 
 // Hook personalizzato per usare il context facilmente
-export const useWishlist = () => {
+export const useContextWishlist = () => {
   const context = useContext(WishlistContext);
   if (!context) {
     throw new Error(
-      "useWishlist deve essere usato all'interno di un WishlistProvider"
+      "useContextWishlist deve essere usato all'interno di un WishlistProvider"
     );
   }
   return context;

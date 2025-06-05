@@ -22,7 +22,7 @@ header {
 
 #mainBg{
     background-image: linear-gradient(rgba(211, 208, 207, 0.7)),
-    url("./assets/bg.jpg") !important;
+    url("./assets/bg2.avif") !important;
     background-repeat: repeat;
     background-size: contain;
 }

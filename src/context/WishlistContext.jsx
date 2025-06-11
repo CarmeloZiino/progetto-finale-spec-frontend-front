@@ -4,37 +4,24 @@ import { createContext, useState, useEffect, useContext } from "react";
 //Contesto
 export const WishlistContext = createContext(null);
 
+//Hooks
+import useStorage from "../hooks/useStorage";
+
 //PROVIDER
 export function WishlistProvider({ children }) {
-  const [wishlist, setWishlist] = useState([]);
+  //Wishlist:
+  const [wishlist, setWishlist] = useStorage("wishlist", []);
+//Gestione dello stato per Visualizzare la Wishlist  
   const [showWishlist, setShowWishlist] = useState(false);
-
-  // Carica la wishlist dal localStorage all'avvio
-  useEffect(() => {
-    const savedWishlist = localStorage.getItem("wishlist");
-    if (savedWishlist) {
-      // Converte id in number per ogni prodotto
-      const parsed = JSON.parse(savedWishlist).map((item) => ({
-        ...item,
-        id: parseInt(item.id),
-      }));
-      setWishlist(parsed);
-    }
-  }, []);
-
-  // Wishlist collegata al LocalStorage
-  useEffect(() => {
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  }, [wishlist]);
 
   // Funzione per aggiungere un prodotto
   const addToWishlist = (product) => {
     setWishlist((prev) => {
       // Controlla se il prodotto è già nella wishlist
-      if (!prev.some((item) => item.id === product.id)) {
+      if (!prev.some((item) => item.id === product.id)) { //Se non è nella lista, lo aggiunge subito dopo quelli già inseriti
         return [...prev, product];
       }
-      return prev;
+      return prev; //Altrimenti ritorna quelli già inseriti
     });
   };
 

@@ -11,7 +11,7 @@ export default function CompareDropDown() {
 
   const [compareProductId, setCompareProductId] = useState(1);
 
-  // Carico i dettagli del prodotto quando cambia l'ID 
+  // Carico i dettagli del prodotto quando cambia l'ID
   useEffect(() => {
     if (compareProductId) {
       fetchSingleProduct(compareProductId);
@@ -64,26 +64,23 @@ export default function CompareDropDown() {
                   {selectedProduct.title}
                 </p>
               </div>
-              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2" style={{borderBottom: "0.6px solid var(--brand-gold-muted)"}}>
                 <span className="text-center">Metodo di distillazione: </span>
                 <p>{selectedProduct.category}</p>
               </div>
-              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2" style={{borderBottom: "1px solid var(--brand-gold-muted)"}}>
                 <span>Formato: </span>
-                <p>{singleProduct.product.format}</p>
+                <p>{singleProduct?.product.format}</p>
               </div>
-              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2" style={{borderBottom: "1px solid var(--brand-gold-muted)"}}>
                 <span>Grado Alcolemico: </span>
-                <p>
-                  {singleProduct.product.alcolContent} %
-    
-                </p>
+                <p>{singleProduct.product.alcolContent} %</p>
               </div>
-              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2" style={{borderBottom: "1px solid var(--brand-gold-muted)"}}>
                 <span>Provenienza: </span>
                 <p>{singleProduct.product.origin}</p>
               </div>
-              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2">
+              <div className="singleDetail d-flex flex-column justify-content-center align-items-center gap-2" style={{borderBottom: "1px solid var(--brand-gold-muted)"}}>
                 <span>Gusto e Aroma: </span>
                 <p className="text-center" style={{ width: "150px" }}>
                   {singleProduct.product.taste}

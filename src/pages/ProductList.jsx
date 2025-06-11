@@ -123,7 +123,7 @@ export default function ProductList() {
                   {filterOptions.map((option, index) => (
                     <button
                       key={index}
-                      onClick={(e) => handleFilterSelect(option)}
+                      onClick={() => handleFilterSelect(option)}
                       className={`btn btn-sm text-start mb-1 ${
                         activeFilter === option ? "fw-bold" : ""
                       }`}

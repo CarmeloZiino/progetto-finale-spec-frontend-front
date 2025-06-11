@@ -16,15 +16,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  
-
 }
 
-#mainBg{
-    background-image: linear-gradient(rgba(211, 208, 207, 0.7)),
+#mainBg {
+  background-image: linear-gradient(rgba(211, 208, 207, 0.7)),
     url("./assets/bg2.avif") !important;
-    background-repeat: repeat;
-    background-size: contain;
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .navIcon {
@@ -102,19 +100,20 @@ header {
   top: 22vh;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px; /* Spazio interno */
-  border-radius: 5pt; /* Arrotonda i bordi */
+  padding: 3px;
+  padding-inline-end: 10px;
+  border-radius: 5pt;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 #searchBar > input {
-  border-radius: 5pt;
-  border: 1px solid var(--color-stone);
-  box-shadow: var(--shadow-medium);
+  border: none;
 }
 
 
-.titleListProduct{
-
+.titleListProduct {
   border-bottom: 1px solid var(--brand-warm-brown);
 }
 
@@ -135,8 +134,6 @@ header {
 }
 
 /* WISHICON */
-
-
 
 /* Media query per desktop */
 @media (min-width: 992px) {

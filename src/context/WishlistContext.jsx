@@ -11,14 +11,15 @@ import useStorage from "../hooks/useStorage";
 export function WishlistProvider({ children }) {
   //Wishlist:
   const [wishlist, setWishlist] = useStorage("wishlist", []);
-//Gestione dello stato per Visualizzare la Wishlist  
+  //Gestione dello stato per Visualizzare la Wishlist
   const [showWishlist, setShowWishlist] = useState(false);
 
   // Funzione per aggiungere un prodotto
   const addToWishlist = (product) => {
     setWishlist((prev) => {
       // Controlla se il prodotto è già nella wishlist
-      if (!prev.some((item) => item.id === product.id)) { //Se non è nella lista, lo aggiunge subito dopo quelli già inseriti
+      if (!prev.some((item) => item.id === product.id)) {
+        //Se non è nella lista, lo aggiunge subito dopo quelli già inseriti
         return [...prev, product];
       }
       return prev; //Altrimenti ritorna quelli già inseriti

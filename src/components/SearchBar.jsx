@@ -1,13 +1,16 @@
-import { useState } from "react";
-
+//Import Essenziali
+import { useRef } from "react";
 //Hooks
 import useDebounce from "../hooks/useDebounce";
-
 //Context
 import { useGlobalContext } from "../context/GlobalContext";
+//icon
+import { FaSearch } from "react-icons/fa";
 
 export default function SearchBar() {
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
+
+  const inputRef = useRef();
 
   //Input Variabile di Stato Ricerca
   const { setSearchQuery } = useGlobalContext();
@@ -24,16 +27,16 @@ export default function SearchBar() {
       onSubmit={(e) => e.preventDefault()}
     >
       <input
+        ref={inputRef}
         className="form-control me-2"
         type="search"
         placeholder="Roby Marton 55"
         aria-label="Search"
-        value={inputValue}
         onChange={(e) => {
-          setInputValue(e.target.value);
           handleSearch(e.target.value);
         }}
       />
+      <FaSearch style={{ color: "var(--brand-dark-brown)" , fontSize: "1.2rem" }} />
     </form>
   );
 }

@@ -1,5 +1,5 @@
 //Import Essenziali
-import React, { createContext, useContext, useState, useMemo } from "react";
+import { createContext, useContext, useState, useMemo } from "react";
 //Import Hooks
 import useProduct from "../hooks/useProduct";
 

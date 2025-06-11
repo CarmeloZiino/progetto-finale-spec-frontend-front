@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora:wght@400;600&family=Ribeye+Marrow&display=swap");
+
+@font-face {
+  font-family: "RioGrande";
+  src: url("../assets/fonts/RioGrande.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RioGrandeStriped";
+  src: url("../assets/fonts/RioGrande Striped.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;}
+
+  @font-face {
+  font-family: "showguide";
+  src: url("../assets/fonts/showguide.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+strong {
+  color: var(--accent-burgundy);
+  font-size: 1.3rem;
+}
+
+.details {
+  color: var(--accent-green-olive);
+  font-size: 1.3rem;
+}
+
+.titleDetails {
+  font-size: 3rem;
+  text-shadow: var(--shadow-medium);
+  font-weight: bolder;
+}
+
+.compareText {
+  display: flex;
+  justify-content: end;
+
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: 900;
+
+  color: var(--text-main);
+}
+
+.compareText:hover {
+  color: var(--accent-burgundy);
+}
+
+.western-text {
+  font-family: "showguide", cursive !important;
+  font-size: 4em;
+    font-weight:lighter !important;
+  letter-spacing: 3.5px;
+  color: var(--brand-dark-brown);
+  text-shadow: var(--shadow-medium);
+}
+
+.western-text-striped {
+  font-family: "RioGrandeStriped", cursive !important;
+  font-size: 3.5em;
+  letter-spacing: 3.5px;
+  color: var(--brand-dark-brown);
+}

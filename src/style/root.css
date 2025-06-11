@@ -1,0 +1,125 @@
+:root {
+  /* ========================
+     BASE – Fondamenta Visive
+  ======================== */
+
+  --color-paper: rgb(248, 245, 237);         /* Sfondo principale tipo carta antica */
+  --color-ink: #1a1a1a;           /* Inchiostro scuro per testi principali */
+  --color-charcoal: rgb(59, 59, 59);      /* Testi secondari, titoli meno evidenti */
+  --color-stone: #b4b4b4;         /* Grigio pietra – bordi, linee, separatori */
+  --color-cloud: rgb(230, 225, 217);         /* Sfondo neutro chiaro per sezioni soft */
+
+  /* ===================================
+     BRAND IDENTITY – Tono Storico + Lusso
+  =================================== */
+
+  --brand-dark-brown: rgb(58, 46, 43);      /* Marrone antico, principale per sfondi scuri */
+  --brand-warm-brown: #6c4f43;      /* Marrone caldo, pulsanti e highlight */
+  --brand-gold-muted: rgb(199, 167, 108);      /* Oro spento, decorazioni raffinate */
+  --brand-copper: #ad6e3c;          /* Rame scuro – hover, dettagli metallici */
+  --brand-cream: #f5f1e7;           /* Crema chiara, accenti soft su sfondo scuro */
+
+  /* ============================
+     ACCENTI – Contrasti e Ritmo Visivo
+  ============================ */
+
+  --accent-green-olive: #5f7351;   /* Verde oliva – badge “bio”, elementi naturali */
+  --accent-burgundy: #721817;      /* Bordeaux – CTA secondarie, titoli forti */
+  --accent-steel-blue: #4a5c6a;    /* Blu-grigio per tocchi moderni e professionali */
+
+  /* ========================
+     STATO – Feedback e Accessibilità
+  ======================== */
+
+  --state-success: #4caf50;        /* Verde – azioni completate con successo */
+  --state-error: #e53935;          /* Rosso – errori o messaggi critici */
+  --state-warning: #ffb300;        /* Giallo/arancio – avvisi */
+  --state-info: #2196f3;           /* Blu – informazioni e tooltip */
+
+  /* =======================
+     SHADOWS – Profondità Modernista
+  ======================= */
+
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Per card, elementi statici */
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15); /* Hover interattivi */
+  --shadow-strong: 0 6px 16px rgba(0, 0, 0, 0.3);  /* Modal, componenti floating */
+
+  /* ===============
+     HEADER
+  =============== */
+
+  --header-bg: var(--brand-warm-brown);       /* Sfondo testata */
+  --header-text: var(--brand-gold-muted);     /* Colore testo principale */
+  --header-hover: var(--brand-copper);        /* Hover su link/menu */
+  --header-shadow: var(--shadow-medium);      /* Ombra testata sticky */
+
+  /* ===============
+     FOOTER
+  =============== */
+
+  --footer-bg: #1a1a1a;                        /* Nero vintage */
+  --footer-text: var(--color-stone);          /* Grigio pietra per leggibilità */
+  --footer-link-hover: var(--brand-gold-muted); /* Hover link elegante */
+
+  /* ========================
+     CARD PRODOTTO / VETRINA
+  ======================== */
+
+  --card-bg: var(--color-paper);              /* Sfondo tipo carta */
+  --card-border: var(--color-stone);          /* Bordi leggeri */
+  --card-title: var(--color-ink);             /* Titolo prodotto */
+  --card-subtitle: var(--color-charcoal);     /* Descrizione sintetica */
+  --card-price: var(--accent-burgundy);       /* Prezzo evidenziato */
+  --card-badge: var(--accent-green-olive);    /* Badge “bio”, “artigianale” */
+  --card-shadow: var(--shadow-soft);          /* Leggera profondità */
+
+  /* ========================
+     TEXT GENERALE
+  ======================== */
+
+  --text-main: var(--color-ink);              /* Testo normale */
+  --text-muted: var(--color-charcoal);        /* Testo secondario */
+  --text-highlight: var(--brand-gold-muted);  /* Testi da enfatizzare */
+  --text-on-dark: var(--color-paper);         /* Testi su sfondi scuri */
+
+  /* ========================
+     BUTTONS – CTA Eleganti
+  ======================== */
+
+  --btn-primary-bg: var(--brand-warm-brown);
+  --btn-primary-text: var(--color-paper);
+  --btn-primary-hover: var(--brand-gold-muted);
+
+  --btn-secondary-bg: var(--accent-burgundy);
+  --btn-secondary-text: var(--color-paper);
+  --btn-secondary-hover: #9c2b2a;
+
+  --btn-outline-border: var(--brand-gold-muted);
+  --btn-outline-text: var(--brand-dark-brown);
+  --btn-outline-hover-bg: var(--color-cloud);
+
+  /* ========================
+     FORM & INPUT
+  ======================== */
+
+  --input-bg: var(--color-cloud);             /* Campo input */
+  --input-border: var(--color-stone);         /* Bordi input */
+  --input-focus: var(--brand-gold-muted);     /* Bordo in focus */
+  --input-text: var(--color-ink);             /* Testo inserito */
+  --input-placeholder: var(--color-charcoal); /* Placeholder visibile */
+
+  /* ========================
+     SEO MARKUP / ACCESSIBILITÀ
+  ======================== */
+
+  --schema-mark-border: var(--accent-steel-blue); /* Evidenziazione strutture visive SEO */
+  --skip-link-bg: var(--brand-copper);            /* Collegamenti accessibili nascosti */
+
+  /* ========================
+     OVERLAY / MODAL
+  ======================== */
+
+  --modal-bg: rgba(0, 0, 0, 0.7);             /* Sfondo scurente */
+  --modal-content-bg: var(--color-paper);     /* Contenuto centrale */
+  --modal-shadow: var(--shadow-strong);       /* Profondità visiva */
+}

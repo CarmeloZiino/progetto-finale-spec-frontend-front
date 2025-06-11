@@ -1,0 +1,186 @@
+/* BackGround and ColorText*/
+
+body {
+  background-color: var(--color-cloud);
+}
+
+/* Header */
+header {
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(58, 46, 43, 0.55)),
+    url("./assets/headerBG.jpg") !important;
+  box-shadow: var(--shadow-strong);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+
+}
+
+#mainBg{
+    background-image: linear-gradient(rgba(211, 208, 207, 0.7)),
+    url("./assets/bg2.avif") !important;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.navIcon {
+  background-color: #f7f5ed;
+  border-radius: 7pt;
+  padding: 4px;
+  margin: 0px !important;
+}
+
+.navbar-brand {
+  margin: 0px !important;
+}
+
+.navbar-brand > img,
+.navIcon {
+  border: 3px solid var(--brand-warm-brown);
+  box-shadow: var(--shadow-strong);
+}
+
+.navBtnLink > p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.navBtnLink {
+  color: var(--brand-warm-brown) !important;
+  background-color: #f7f5ed;
+  border-radius: 7pt;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.navBtnLink:hover {
+  border-radius: 7pt;
+  color: var(--brand-gold-muted) !important;
+  background-color: var(--accent-steel-blue);
+  font-weight: 900;
+}
+
+.icon {
+  font-size: 1.9rem;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  animation: drunken-wave 3s ease-in-out infinite;
+}
+
+@keyframes drunken-wave {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(-3px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(0) rotate(3deg);
+  }
+  75% {
+    transform: translateX(3px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+/* SearchBar */
+
+#searchBar {
+  width: 70%;
+  max-width: 1000px;
+  position: fixed;
+  z-index: 2;
+  top: 22vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px; /* Spazio interno */
+  border-radius: 5pt; /* Arrotonda i bordi */
+}
+
+#searchBar > input {
+  border-radius: 5pt;
+  border: 1px solid var(--color-stone);
+  box-shadow: var(--shadow-medium);
+}
+
+
+.titleListProduct{
+
+  border-bottom: 1px solid var(--brand-warm-brown);
+}
+
+/* PAGINA DI DETTAGLIO */
+.cardDetails {
+  background-color: var(--color-cloud);
+  box-shadow: var(--shadow-strong);
+  border-radius: 10pt;
+  padding: 1.5rem;
+  margin: auto;
+  box-sizing: content-box;
+}
+
+.infoDetails {
+  padding: 2.2rem;
+  border-radius: 10pt;
+  background-color: rgba(255, 255, 255, 0.648) !important;
+}
+
+/* WISHICON */
+
+
+
+/* Media query per desktop */
+@media (min-width: 992px) {
+  header {
+    height: 30vh;
+  }
+
+  #searchBar {
+    position: fixed;
+    z-index: 2;
+    top: 27vh;
+  }
+
+  .icon {
+    font-size: 3rem !important;
+  }
+}
+
+/* LOGO */
+#logo {
+  transition: all 0.5s ease;
+  transform-origin: center;
+  position: relative;
+}
+
+#logo:hover {
+  animation: saloon-sign 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px var(--brand-warm-brown));
+}
+
+@keyframes saloon-sign {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(2deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(-1deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}

@@ -74,7 +74,7 @@ export default function DetailsPage() {
       >
         <div className="mb-4 mb-md-0 col-12 col-md-6 d-flex align-items-center justify-content-center">
           <img
-            src={`/gin/${singleProduct.product.title}.jpg`}
+            src={`/gin/${singleProduct.product.title}.jpeg`}
             alt={singleProduct.product.title}
             style={{
               width: "100%",

@@ -26,7 +26,7 @@ export function GlobalProvider({ children }) {
         .includes(searchQuery.toLowerCase())
     );
 
-    // Condizione per il Filtraggio
+    // Condizione per il Filtraggio per metodi di distillazione
     if (activeFilter !== "Tutti") {
       filtered = filtered.filter((p) => p.category === activeFilter);
     }

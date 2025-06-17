@@ -41,7 +41,7 @@ export default function ProductRow({ id, title, category }) {
           }}
           onClick={() => {
             if (isProductInWishlist) {
-              removeFromWishlist(String(id));
+              removeFromWishlist(id);
             } else {
               handleAddToWishlist();
             }

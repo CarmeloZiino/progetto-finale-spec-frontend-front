@@ -60,7 +60,7 @@ export default function Wishlist() {
                   </div>
                   <button
                     className="remove-btn"
-                    onClick={() => removeFromWishlist(String(product.id))}
+                    onClick={() => removeFromWishlist(product.id)}
                   >
                     <FaTrash />
                   </button>

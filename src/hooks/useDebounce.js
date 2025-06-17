@@ -1,11 +1,9 @@
 import { useRef, useCallback } from "react";
 
 export default function useDebounce(callback, delay) {
-  let timer = useRef(null);
-  /* Il commento originale sul ReturnType è stato rimosso 
-     poiché era specifico di TypeScript */
+  let timer = useRef(null); //senza useRef questa variabile viene inizializzata ad ogni render
 
-  return useCallback(
+  return useCallback( //Senza useCallback avrei una funzione instabile, mentre così il valore viene ricalcolata solo se cambiano le dipendenze
     (value) => {
       if (timer.current) {
         clearTimeout(timer.current);

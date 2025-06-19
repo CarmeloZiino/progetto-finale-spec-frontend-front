@@ -4,9 +4,6 @@ import Footer from "../components/Footer";
 //Import React
 import { Outlet } from "react-router-dom";
 
-//img
-import bgMain from "../assets/bg.jpg";
-
 export default function DefaultLayout() {
   return (
     <>

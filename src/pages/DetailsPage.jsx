@@ -41,7 +41,9 @@ export default function DetailsPage() {
     addToWishlist(productToAdd);
   };
 
-  //NOTA: Bisogna ribadire la condizione prima del return, altrimenti non reinderizza correttamente
+  /* NOTA: Bisogna ribadire la condizione prima del return, 
+  altrimenti non reinderizza correttamente */
+  
   if (!singleProduct || !singleProduct.product) {
     return <div>Caricamento in corso...</div>;
   }

@@ -22,7 +22,7 @@ export default function Wishlist() {
 
   return ReactDOM.createPortal(
     <>
-      {/* Aggiungi il backdrop scuro */}
+      {/* backdrop scuro */}
       <div className="wishlist-backdrop" onClick={toggleWishlist}></div>
 
       <div className="wishlist-overlay">

@@ -1,4 +1,3 @@
-
 //Components
 import CompareDropDown from "../components/CompareDropDown";
 
@@ -21,9 +20,11 @@ export default function ComparePage() {
           <div>
             <CompareDropDown />
           </div>
+          {/* Compare solo da Tablet in sù */}
           <div className="d-none d-md-block">
             <CompareDropDown />
           </div>
+          {/* Compare solo da Dextop in sù */}
           <div className="d-none d-lg-block">
             <CompareDropDown />
           </div>

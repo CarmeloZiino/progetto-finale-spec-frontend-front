@@ -93,7 +93,7 @@ export default function ProductList() {
         <h1 className="mb western-text">i Nostri Gin</h1>
         <div className="filterAndOrder d-flex justify-content-center align-items-center gap-3">
           <div className="position-relative">
-            {/* Menù a tendina, Filtro per Metodo. Ps. essendo che le Categorie rappresentano un unico prodotto (GIN) ho filtrato per il metodo di distillazione */}
+            {/* Menù a tendina, Filtro per Metodo.*/}
             <FaFilter
               onClick={handleFilterClick}
               style={{
@@ -165,6 +165,8 @@ export default function ProductList() {
           )}
         </div>
       </div>
+
+      {/* LISTA PRODOTTI */}
       <div className="row gap-4 justify-content-center">
         {filteredProducts.map((p) => {
           return (

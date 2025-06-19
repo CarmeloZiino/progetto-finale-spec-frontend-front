@@ -1,4 +1,3 @@
-
 //Hooks
 import useDebounce from "../hooks/useDebounce";
 //Context
@@ -7,8 +6,6 @@ import { useGlobalContext } from "../context/GlobalContext";
 import { FaSearch } from "react-icons/fa";
 
 export default function SearchBar() {
-
-
   //Input Variabile di Stato Ricerca
   const { setSearchQuery } = useGlobalContext();
 
@@ -32,7 +29,9 @@ export default function SearchBar() {
           handleSearch(e.target.value);
         }}
       />
-      <FaSearch style={{ color: "var(--brand-dark-brown)" , fontSize: "1.2rem" }} />
+      <FaSearch
+        style={{ color: "var(--brand-dark-brown)", fontSize: "1.2rem" }}
+      />
     </form>
   );
 }

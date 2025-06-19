@@ -18,7 +18,7 @@ export default function Wishlist() {
 
   // Se la wishlist non è visibile, non renderizziamo nulla (e ci mancherebbe)
   if (!showWishlist) return null;
-  console.log("Wishlist:", wishlist);
+  // console.log("Wishlist:", wishlist);
 
   return ReactDOM.createPortal(
     <>

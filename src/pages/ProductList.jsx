@@ -173,8 +173,6 @@ export default function ProductList() {
               id={p.id}
               title={p.title}
               category={p.category}
-              origin={p.origin}
-              image={p.image}
             />
           );
         })}
